@@ -1,0 +1,116 @@
+
+
+    <div class="container-fluid">
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active">Users</li>
+      </ol>
+      <!-- Example DataTables Card-->
+      <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-table"></i> all users</div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+
+                    <th>ID</th>          
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>password</th>
+                    <th>Creat Date</th>
+                    <th>Update Date</th>
+                    <th>User Status</th>
+                    <th>Actions</th>
+                
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                    <th>ID</th>          
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>password</th>
+                    <th>Creat Date</th>
+                    <th>Update Date</th>
+                    <th>User Status</th>
+                    <th>Actions</th>
+                </tr>
+              </tfoot>
+              <tbody>
+                {{#each Users}}  
+                <tr>
+                    <td>{{id}}</td>          
+                    <td>{{firstName}}</td>
+                    <td>{{lastName}}</td>
+                    <td>{{email}}</td>
+                    <td>{{password}}</td>
+                    <td>{{createdAt}}</td>
+                    <td>{{updatedAt}}</td>
+                    <td>{{userstatus}}</td>
+                    <td class="d-flex">
+                        <a href="#" class="btn btn-sm btn-warning mr-2">Edit</a>
+
+                        <form >
+                            <button class="btn btn-sm btn-danger" type="submit">Delete</button>
+                        </form>
+
+                    </td>
+                </tr>
+               {{/each}}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    
+
+
+
+{{!-- <div class="container">
+    <div class="alert alert-secondary text-center">
+        <h1>ALL POSTS</h1>    
+    </div>
+        
+    <table class="table table-bordered">
+        <thead class="bg-dark text-center">
+        <tr class="text-white">
+            <th>ID</th>          
+            <th>Title</th>
+            <th>Description</th>
+            <th>Create Date</th>
+            <th>Update Date</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody class="text-center">
+        {{#each Posts}}
+            <tr  class="text-black">     
+                <td>{{id}}</td>          
+                <td>{{title}}</td>
+                <td>{{description}}</td>
+                <td>{{createdAt}}</td>
+                <td>{{updatedAt}}</td>
+                <td class="d-flex">
+                    <a href="/admin/posts/edit/{{id}}" class="btn btn-sm btn-warning mr-2">Edit Post</a>
+
+                    <form action="/admin/posts/delete/{{id}}" method="post">
+                        <button class="btn btn-sm btn-danger" type="submit">Delete Post</button>
+                    </form>
+                    
+                    
+                </td>
+            </tr>    
+        {{/each}}
+        
+        </tbody>
+    </table>
+    
+    
+</div> --}}

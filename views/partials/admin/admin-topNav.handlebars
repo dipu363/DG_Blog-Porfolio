@@ -1,0 +1,81 @@
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="/">DEEPLAID CMS</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="true" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+          <a class="nav-link" href="/admin">
+            <i class="fa fa-fw fa-dashboard"></i>
+            <span class="nav-link-text">Dashboard</span>
+          </a>
+        </li>
+        
+         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="POSTS">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#allposts" data-parent="#exaAccordion">
+            <i class="fa fa-fw fa-folder"></i>
+            <span class="nav-link-text">POSTS</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="allposts">
+            <li>
+              <a href="/admin/posts">ALL POSTS</a>
+            </li>
+            <li>
+              <a href="/admin/posts/create">CREATE POST</a>
+            </li>
+            
+          </ul>
+        </li>
+           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="USERS">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#users" data-parent="#exaAccordion">
+            <i class="fa fa-fw fa-folder"></i>
+            <span class="nav-link-text">USERS</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="users">
+            <li>
+              <a href="/admin/users">ALL USERS</a>
+            </li>
+            <li>
+              <a href="/admin/users/register">CREATE USER</a>
+            </li>
+            
+          </ul>
+        </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Company Information">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#cominfo" data-parent="#exaAccordion">
+            <i class="fa fa-fw fa-folder"></i>
+            <span class="nav-link-text">COMPANY INFORMATION</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="cominfo">
+            <li>
+              <a href="/admin/cominfo/about">ABOUT</a>
+            </li>
+            <li>
+              <a href="/admin/cominfo/contact">CONTACT</a>
+            </li>
+             <li>
+              <a href="/login">LOGOUT</a>
+            </li>
+          </ul>
+        </li>
+        
+       
+      
+     </ul>
+      <ul class="navbar-nav sidenav-toggler">
+        <li class="nav-item">
+          <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa navbar-toggler-icon"></i>
+          </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+            <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+        </li>
+      </ul>
+    </div>
+</nav>

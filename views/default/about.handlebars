@@ -1,0 +1,536 @@
+
+
+<!-- #region Jssor Slider Begin -->
+    <!-- Generator: Jssor Slider Composer -->
+    <!-- Source: https://www.jssor.com/demos/carousel-slider.slider/=edit -->
+
+
+
+    <script src="/js/jssor.slider-28.0.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.jssor_1_slider_init = function() {
+
+            var jssor_1_options = {
+              $AutoPlay: 1,
+              $AutoPlaySteps: 5,
+              $SlideDuration: 160,
+              $SlideWidth: 200,
+              $SlideSpacing: 3,
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$,
+                $Steps: 5
+              },
+              $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$,
+                $SpacingX: 16,
+                $SpacingY: 16
+              }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*#region responsive code begin*/
+
+            var MAX_WIDTH = 980;
+
+            function ScaleSlider() {
+                var containerElement = jssor_1_slider.$Elmt.parentNode;
+                var containerWidth = containerElement.clientWidth;
+
+                if (containerWidth) {
+
+                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                    jssor_1_slider.$ScaleWidth(expectedWidth);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+
+            ScaleSlider();
+
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            /*#endregion responsive code end*/
+        };
+    </script>
+    <style>
+        /*jssor slider loading skin spin css*/
+        .jssorl-009-spin img {
+            animation-name: jssorl-009-spin;
+            animation-duration: 1.6s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes jssorl-009-spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /*jssor slider bullet skin 057 css*/
+        .jssorb057 .i {position:absolute;cursor:pointer;}
+        .jssorb057 .i .b {fill:none;stroke:#fff;stroke-width:2000;stroke-miterlimit:10;stroke-opacity:0.4;}
+        .jssorb057 .i:hover .b {stroke-opacity:.7;}
+        .jssorb057 .iav .b {stroke-opacity: 1;}
+        .jssorb057 .i.idn {opacity:.3;}
+
+        /*jssor slider arrow skin 073 css*/
+        .jssora073 {display:block;position:absolute;cursor:pointer;}
+        .jssora073 .a {fill:#ddd;fill-opacity:.7;stroke:#000;stroke-width:160;stroke-miterlimit:10;stroke-opacity:.7;}
+        .jssora073:hover {opacity:.8;}
+        .jssora073.jssora073dn {opacity:.4;}
+        .jssora073.jssora073ds {opacity:.3;pointer-events:none;}
+    </style>
+
+
+{{!-- //main container start here  --}}
+
+
+
+<div class="continear" >
+
+    <div class="jumbotron jumbotron-fluid" style="background: url('/uploads/background.jpg'); background-size: 100% 100%; ">
+    
+        <h1 class="text-center " style=" color: black;  font-style: italic ;">About Us</h1>
+     
+    </div>
+
+<div class="row" >
+ <div class="col-md-3 " > 
+<div class="card mb-4" style="margin-top: 100px;">
+                <img class="card-img-top" style=" height: 270px;" src="uploads/Giyas Uddin.jpg" alt="Card image cap">
+                             
+                <div class="card-footer text-muted">
+                    Posted on {{creationDate}} by
+                    <a href="#">Admin</a>
+                </div>
+            </div>
+
+
+      
+  
+
+<div class="card my-4">
+            <h5 class="card-header text-center">Masseges</h5>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <ul class="list-unstyled mb-0">
+                            {{#each categories}}
+                                <li>
+                                    <a href="#">{{title}}</a>
+                                </li>
+                            {{/each}}
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+ </div>
+ <div class="col-md-1"></div>
+ <div class="col-md-8 ">
+        
+        <h1 class="text-left  " style=" font-style: italic ; ">Spaech</h1>
+        <P style=" color: mediumblue;">____________________________</P>
+
+            <div class="row">
+                
+              <p>A blog (a truncation of "weblog")[1] is a discussion or informational
+                   website published on the World Wide Web consisting of discrete, often informal
+                    diary-style text entries (posts). Posts are typically displayed in reverse chronological
+                     order, so that the most recent post appears first, at the top of the web page. 
+                     Until 2009, blogs were usually the work of a single individual,[citation needed] 
+                     occasionally of a small group, and often covered a single subject or topic. In the 2010s,
+                      "multi-author blogs" (MABs) emerged, featuring the writing of multiple authors 
+                      and sometimes professionally edited. MABs from newspapers, other media outlets,
+                       universities, think tanks, advocacy groups, and similar institutions account
+                        for an increasing quantity of blog traffic. The rise of Twitter and other 
+                        "microblogging" systems helps integrate MABs and single-author blogs into 
+                        the news media. Blog can also be used as a verb, meaning to maintain or 
+                        add content to a blog. The emergence and growth of blogs in the late 1990s
+                         coincided with the advent of web publishing tools that facilitated the
+                          posting of content by non-technical users who did not have much 
+                          experience with HTML or computer programming. Previously, a knowledge 
+                          of such technologies as HTML and File Transfer Protocol had been required
+                           to publish content on the Web, and early Web users therefore tended to be hackers
+                            and computer enthusiasts. In the 2010s, the majority are interactive Web 2.0 websites,
+                             allowing visitors to leave online comments, and it is this interactivity that
+                              distinguishes them from other static websites.[2] In that sense, blogging
+                               can be seen as a form of social networking service. Indeed, bloggers not only
+                                produce content to post on their blogs but also often build social relations 
+                                with their readers and other bloggers.[3] However, there are high-readership 
+                                blogs which do not allow comments. Many blogs provide commentary on a particular 
+                                subject or topic, ranging from politics to sports. Others function as more personal
+                                 online diaries, and others function more as online brand advertising of a
+                                  particular individual or company. A typical blog combines text, digital images,
+                                   and links to other blogs, web pages, and other media related to its topic. 
+                                   The ability of readers to leave publicly viewable comments, and interact with
+                                    other commenters, is an important contribution to the popularity of many blogs.
+                                     However, blog owners or authors often moderate and filter online comments
+                                      to remove hate speech or other offensive content. Most blogs are 
+                                      primarily textual, although some focus on art (art blogs), photographs
+                                       (photoblogs), videos (video blogs or "vlogs"), music (MP3 blogs), and 
+                                       audio (podcasts). In education, blogs can be used as instructional 
+                                       resources. These blogs are referred to as edublogs. Microblogging is
+                                        another type of blogging, featuring very short posts. 'Blog' and 'blogging'
+                                         are now loosely used for content creation and sharing on social media,
+                                          especially when the content is long-form and one creates and shares content
+                                           on regular basis. So, one could be maintaining a blog on Facebook or 
+                                           blogging on Instagram. On February 16, 2011, there were over 156 million
+                                            public blogs in existence. On February 20, 2014, there were around 
+                                            172 million Tumblr[4] and 75.8 million WordPress[5] blogs in existence 
+                                            worldwide. According to critics and other bloggers, Blogger is the most 
+                                            popular blogging service used today. However, Blogger does not offer public 
+                                            statistics.[6][7] Technorati lists 1.3 million blogs as of February 22, 2014.[8] </p>
+                
+            </div>
+            
+
+    </div>
+
+</div>
+</div>
+
+{{!-- //container our teem start --}}
+
+<div class="container" style="margin-top: 100px;">
+    <div class="row ">
+        <div class="col-md-12">
+            <h1 class="text-center red " style=" font-style: italic ;color: gold; font-family:    Lucida Sans Regular;  "><u>Our Teem Member</u></h1>
+        
+        </div>
+
+
+    </div>
+
+
+    
+  <div class="row" style="margin-top: 100px;">
+    <div class="col-md-3">
+<div class="card mb-4" >
+                <img class="card-img-top" style=" height: 270px;" src="uploads/Giyas Uddin.jpg" alt="Card image cap">
+                             
+                <div class="card-footer text-muted">    
+                    Posted on {{creationDate}} by
+                    <a href="#">Admin</a>
+                </div>
+            </div>
+
+
+    </div>
+    <div class="col-md-3">
+        <div class="card mb-4" >
+                <img class="card-img-top" style=" height: 270px;" src="uploads/Giyas Uddin.jpg" alt="Card image cap">
+                             
+                <div class="card-footer text-muted">
+                    Posted on {{creationDate}} by
+                    <a href="#">Admin</a>
+                </div>
+            </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card mb-4" >
+                <img class="card-img-top" style=" height: 270px;" src="uploads/Giyas Uddin.jpg" alt="Card image cap">
+                             
+                <div class="card-footer text-muted">
+                    Posted on {{creationDate}} by
+                    <a href="#">Admin</a>
+                </div>
+            </div></div>
+    <div class="col-md-3">
+
+        <div class="card mb-4" >
+                <img class="card-img-top" style=" height: 270px;" src="uploads/Giyas Uddin.jpg" alt="Card image cap">
+                             
+                <div class="card-footer text-muted">
+                    Posted on {{creationDate}} by
+                    <a href="#">Admin</a>
+                </div>
+            </div>
+    </div>
+       <div class="col-md-3">
+
+        <div class="card mb-4" >
+                <img class="card-img-top" style=" height: 270px;" src="uploads/Giyas Uddin.jpg" alt="Card image cap">
+                             
+                <div class="card-footer text-muted">
+                    Posted on {{creationDate}} by
+                    <a href="#">Admin</a>
+                </div>
+            </div>
+    </div>
+       <div class="col-md-3">
+
+        <div class="card mb-4" >
+                <img class="card-img-top" style=" height: 270px;" src="uploads/Giyas Uddin.jpg" alt="Card image cap">
+                             
+                <div class="card-footer text-muted">
+                    Posted on {{creationDate}} by
+                    <a href="#">Admin</a>
+                </div>
+            </div>
+    </div>
+       <div class="col-md-3">
+
+        <div class="card mb-4" >
+                <img class="card-img-top" style=" height: 270px;" src="uploads/Giyas Uddin.jpg" alt="Card image cap">
+                             
+                <div class="card-footer text-muted">
+                    Posted on {{creationDate}} by
+                    <a href="#">Admin</a>
+                </div>
+            </div>
+    </div>
+       <div class="col-md-3">
+
+        <div class="card mb-4" >
+                <img class="card-img-top" style=" height: 270px;" src="uploads/Giyas Uddin.jpg" alt="Card image cap">
+                             
+                <div class="card-footer text-muted">
+                    Posted on {{creationDate}} by
+                    <a href="#">Admin</a>
+                </div>
+            </div>
+    </div>
+       <div class="col-md-3">
+
+        <div class="card mb-4" >
+                <img class="card-img-top" style=" height: 270px;" src="uploads/Giyas Uddin.jpg" alt="Card image cap">
+                             
+                <div class="card-footer text-muted">
+                    Posted on {{creationDate}} by
+                    <a href="#">Admin</a>
+                </div>
+            </div>
+    </div>
+       <div class="col-md-3">
+
+        <div class="card mb-4" >
+                <img class="card-img-top" style=" height: 270px;" src="uploads/Giyas Uddin.jpg" alt="Card image cap">
+                             
+                <div class="card-footer text-muted">
+                    Posted on {{creationDate}} by
+                    <a href="#">Admin</a>
+                </div>
+            </div>
+    </div>
+       <div class="col-md-3">
+
+        <div class="card mb-4" >
+                <img class="card-img-top" style=" height: 270px;" src="uploads/Giyas Uddin.jpg" alt="Card image cap">
+                             
+                <div class="card-footer text-muted">
+                    Posted on {{creationDate}} by
+                    <a href="#">Admin</a>
+                </div>
+            </div>
+    </div>
+       <div class="col-md-3">
+
+        <div class="card mb-4" >
+                <img class="card-img-top" style=" height: 270px;" src="uploads/Giyas Uddin.jpg" alt="Card image cap">
+                             
+                <div class="card-footer text-muted">
+                    Posted on {{creationDate}} by
+                    <a href="#">Admin</a>
+                </div>
+            </div>
+    </div>
+     
+    
+  </div>
+  
+
+</div>
+
+{{!-- //container for our vlaueable client --}}
+
+<div class="container" style="margin-top: 100px;">
+    <div class="row ">
+        <div class="col-md-12">
+            <h1 class="text-center red " style=" font-style: italic ;color: purple; font-family:    Lucida Sans Regular;  "><u>Our Teem Mamber</u></h1>
+        
+        </div>
+
+
+    </div> 
+  <div class="row" style="margin-top: 100px;">
+
+    <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1000px;height:260px;overflow:hidden;visibility:hidden;">
+        <!-- Loading Screen -->
+        <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+            <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="img/spin.svg" />
+        </div>
+        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1000px;height:260px;overflow:hidden;">
+            <div>
+                <img data-u="image" src="img/001.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="img/005.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="img/006.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="img/007.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="img/008.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="img/009.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="img/010.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="img/011.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="img/024.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="img/025.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="img/026.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="img/027.jpg" />
+            </div>
+        </div><a data-scale="0" href="https://www.jssor.com" style="display:none;position:absolute;">web animation composer</a>
+        <!-- Bullet Navigator -->
+        <div data-u="navigator" class="jssorb057" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+            <div data-u="prototype" class="i" style="width:14px;height:14px;">
+                <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                    <circle class="b" cx="8000" cy="8000" r="5000"></circle>
+                </svg>
+            </div>
+        </div>
+        <!-- Arrow Navigator -->
+        <div data-u="arrowleft" class="jssora073" style="width:50px;height:50px;top:0px;left:30px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <path class="a" d="M4037.7,8357.3l5891.8,5891.8c100.6,100.6,219.7,150.9,357.3,150.9s256.7-50.3,357.3-150.9 l1318.1-1318.1c100.6-100.6,150.9-219.7,150.9-357.3c0-137.6-50.3-256.7-150.9-357.3L7745.9,8000l4216.4-4216.4 c100.6-100.6,150.9-219.7,150.9-357.3c0-137.6-50.3-256.7-150.9-357.3l-1318.1-1318.1c-100.6-100.6-219.7-150.9-357.3-150.9 s-256.7,50.3-357.3,150.9L4037.7,7642.7c-100.6,100.6-150.9,219.7-150.9,357.3C3886.8,8137.6,3937.1,8256.7,4037.7,8357.3 L4037.7,8357.3z"></path>
+            </svg>
+        </div>
+        <div data-u="arrowright" class="jssora073" style="width:50px;height:50px;top:0px;right:30px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <path class="a" d="M11962.3,8357.3l-5891.8,5891.8c-100.6,100.6-219.7,150.9-357.3,150.9s-256.7-50.3-357.3-150.9 L4037.7,12931c-100.6-100.6-150.9-219.7-150.9-357.3c0-137.6,50.3-256.7,150.9-357.3L8254.1,8000L4037.7,3783.6 c-100.6-100.6-150.9-219.7-150.9-357.3c0-137.6,50.3-256.7,150.9-357.3l1318.1-1318.1c100.6-100.6,219.7-150.9,357.3-150.9 s256.7,50.3,357.3,150.9l5891.8,5891.8c100.6,100.6,150.9,219.7,150.9,357.3C12113.2,8137.6,12062.9,8256.7,11962.3,8357.3 L11962.3,8357.3z"></path>
+            </svg>
+        </div>
+    </div>
+  
+    </div>
+</div>
+
+{{!-- //container for our vlaueable client --}}
+
+<div class="container" style="margin-top: 100px;">
+    <div class="row ">
+        <div class="col-md-12">
+            <h1 class="text-center red " style=" font-style: italic ;color: purple; font-family:    Lucida Sans Regular;  "><u>Our Valueable client</u></h1>
+        
+        </div>
+
+
+    </div>
+
+
+    
+  <div class="row" style="margin-top: 100px;">
+    <div class="col-md-2" style="margin: 10px;">
+          <div class="container">     
+             <img src="uploads/Adidas.png" class="rounded-circle" alt="Cinque Terre" width="150px" height="150px"> 
+         </div>
+    </div>
+     <div class="col-md-2" style="margin: 10px;">
+          <div class="container">     
+             <img src="uploads/toyota-logo.png" class="rounded-circle" alt="Cinque Terre" width="150px" height="150px"> 
+         </div>
+    </div>
+    <div class="col-md-2" style="margin: 10px;">
+          <div class="container">     
+             <img src="uploads/Adidas.png" class="rounded-circle" alt="Cinque Terre" width="150px" height="150px"> 
+         </div>
+    </div>
+    <div class="col-md-2" style="margin: 10px;">
+          <div class="container">     
+             <img src="uploads/toyota-logo.png" class="rounded-circle" alt="Cinque Terre" width="150px" height="150px"> 
+         </div>
+    </div>
+    <div class="col-md-2" style="margin: 10px;">
+          <div class="container">     
+             <img src="uploads/Adidas.png" class="rounded-circle" alt="Cinque Terre" width="150px" height="150px"> 
+         </div>
+    </div>
+    <div class="col-md-2" style="margin: 10px;">
+          <div class="container">     
+             <img src="uploads/toyota-logo.png" class="rounded-circle" alt="Cinque Terre" width="150px" height="150px"> 
+         </div>
+    </div>
+    <div class="col-md-2" style="margin: 10px;">
+          <div class="container">     
+             <img src="uploads/Adidas.png" class="rounded-circle" alt="Cinque Terre" width="150px" height="150px"> 
+         </div>
+    </div>
+    <div class="col-md-2" style="margin: 10px;">
+          <div class="container">     
+             <img src="uploads/toyota-logo.png" class="rounded-circle" alt="Cinque Terre" width="150px" height="150px"> 
+         </div>
+    </div>
+    <div class="col-md-2" style="margin: 10px;">
+          <div class="container">     
+             <img src="uploads/Adidas.png" class="rounded-circle" alt="Cinque Terre" width="150px" height="150px"> 
+         </div>
+    </div>
+    <div class="col-md-2" style="margin: 10px;">
+          <div class="container">     
+             <img src="uploads/toyota-logo.png" class="rounded-circle" alt="Cinque Terre" width="150px" height="150px"> 
+         </div>
+    </div>
+    <div class="col-md-2" style="margin: 10px;">
+          <div class="container">     
+             <img src="uploads/Adidas.png" class="rounded-circle" alt="Cinque Terre" width="150px" height="150px"> 
+         </div>
+    </div>
+    <div class="col-md-2" style="margin: 10px;">
+          <div class="container">     
+             <img src="uploads/toyota-logo.png" class="rounded-circle" alt="Cinque Terre" width="150px" height="150px"> 
+         </div>
+    </div>
+    <div class="col-md-2" style="margin: 10px;">
+          <div class="container">     
+             <img src="uploads/Adidas.png" class="rounded-circle" alt="Cinque Terre" width="150px" height="150px"> 
+         </div>
+    </div>
+    <div class="col-md-2" style="margin: 10px;">
+          <div class="container">     
+             <img src="uploads/toyota-logo.png" class="rounded-circle" alt="Cinque Terre" width="150px" height="150px"> 
+         </div>
+    </div> <div class="col-md-2" style="margin: 10px;">
+          <div class="container">     
+             <img src="uploads/Adidas.png" class="rounded-circle" alt="Cinque Terre" width="150px" height="150px"> 
+         </div>
+    </div>
+    
+
+    
+     
+  
+    </div>
+    <div class="row" style="margin-top: 100px;"></div>
+
+
+</div>
+
+{{!-- script start here --}}
+
+<script type="text/javascript">jssor_1_slider_init();
+    </script>
+    <!-- #endregion Jssor Slider End -->

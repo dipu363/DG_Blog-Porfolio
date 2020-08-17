@@ -1,0 +1,81 @@
+
+<div class="continear" style="background: url('/uploads/background.jpg'); background-size: 100% 100%; ">
+<div class="row" >
+    <div class="col-md-6">
+
+                    <p>this is anouther section</p>
+                </div>
+ <div class="col-md-6 ">
+        
+        <h1 class="text-left  " style="margin-top: 20px; color: mediumblue;  font-style: italic ; font-weight: bold;">Contact Us</h1>
+        <P style=" color: mediumblue;">____________________________</P>
+
+            <div class="row">
+                
+                <div class="col-md-6 " style="margin-top: 20px; margin-left: 50px; margin-bottom: 20px; ">
+                    <h4 style="color:mediumblue;  font-style: italic; font-weight: bold;">Address </h4>
+                    <p style="color: mediumblue;  font-style: italic; font-weight: bold;">109/A sahid faruk road, Jatrabari <br> Dhaka - 1000  </p>
+                    <h4 style="color:mediumblue;  font-style: italic; font-weight: bold;">Email </h4>
+                    <p style="color: mediumblue;  font-style: italic; font-weight: bold;">Giyasuddin636@gmail.com</p>
+                    <h4 style="color:red;  font-style: italic; font-weight: bold;">Phone no </h4>
+                    <p style="color: red;  font-style: italic; font-weight: bold;">02-74893726</p>
+                    <h4 style="color:red;  font-style: italic; font-weight: bold;">Mobile no</h4>
+                    <p style="color: red;  font-style: italic; font-weight: bold;">01933932636</p>
+                    <h4 style="color:red;  font-style: italic; font-weight: bold;">Fax </h4>
+                    <p style="color: red;  font-style: italic; font-weight: bold;"> 02-6746382</p>
+                    
+
+                </div>
+                
+            </div>
+            
+
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card card-register mx-auto my-5">
+            <div class="card-header"><h1 class="text-center " style="color:mediumblue; font-family:cursive;">Massege</h1></div>
+            <div class="card-body">
+                <form action="/contact" method="post">
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-md-6">
+                                <label for="exampleInputName"><h4>Name *</h4> </label>
+                                <input name="name" class="form-control" id="nameid" type="text" placeholder="Enter Your Name " required
+                                       value="{{name}}">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="exampleInputLastName"><h4>Email Address *</h4></label>
+                                <input name="email" class="form-control" id="emailid" type="email" placeholder="Enter Your Email Address" required
+                                 value="{{email}}">
+                            </div>
+                        </div>
+                    </div>
+                  
+                 <div class="form-group">
+                    <label for="massege"><h4>Massege *</h4></label>
+                    <textarea name="massege" id="massegeid" class="form-control" placeholder="Enter your Massege here" rows="10"required value="{{massegebody}}"></textarea>
+                </div>
+                <p>Type your massege within 250 characters.</p>
+                    <button type="submit" class="btn btn-primary btn-block">SEND</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+     <div class="col-md-6">
+        <div class="card card-register mx-auto my-5">
+            <div class="card-header"><h1 class="text-center " style="color:mediumblue; font-family:cursive;">Location Map</h1></div>
+            <div>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6292.621346665548!2d90.41049327318095!3d23.724621205919675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b854112c3465%3A0x1f48692de16cb91a!2sWari%20Sub%20Post%20Office!5e0!3m2!1sen!2sbd!4v1597155463406!5m2!1sen!2sbd" 
+              width="537" height="445" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>

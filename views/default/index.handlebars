@@ -1,0 +1,62 @@
+  
+ 
+
+  
+  <div class="row">
+        <!-- Blog Entries Column -->
+        <div class="col-md-1"></div>
+        
+  
+        <div class="col-md-10">
+                 <div class="jumbotron jumbotron-fluid" style="background: url('/uploads/background.jpg'); background-size: 100% 100%; ">
+            <div class="container" style="text-align: center; color: black;">
+              <h1 class="display-4 " >Deeplaid News</h1>
+              <p class="lead">Find the latest news about Deeplaid laboratories limited</p>
+            </div>
+        </div>
+
+          <!-- Blog Post -->
+
+          {{#each Posts}}
+          
+          <div class="card mb-4">
+            
+              <h1 class="card-title " style="text-align: center;"><u>{{title}}</u></u></h1>
+              
+           
+            <div class="card-body">
+               
+              
+
+              <div class="square">
+
+                <div>
+                  <img style="width: 300px; height: 200px; float: left; margin-right: 10px;" src="{{file}}" alt="Card image cap">
+                </div>
+                <p class="card-text " style="text-align: justify;">{{description}}</p>
+              
+              </div>
+            </div>
+            <div class="card-footer text-muted">
+            Posted on {{updatedAt}}
+              
+            </div>
+          </div>
+          {{/each}}
+
+
+          <!-- Pagination -->
+          <ul class="pagination justify-content-center mb-4">
+            <li class="page-item">
+              <a class="page-link" href="#">&larr; Older</a>
+            </li>
+            <li class="page-item disabled">
+              <a class="page-link" href="#">Newer &rarr;</a>
+            </li>
+          </ul>
+
+          </div>   
+        </div>
+
+    
+      <!-- /.row -->
