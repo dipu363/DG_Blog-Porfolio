@@ -156,16 +156,7 @@ module.exports = {
         createuser:(req,res)=>{
 
 
-            // let errors= [];
-            // if(req.body.password !== req.body.passwordConfirm){
-            //     errors.push({massege: 'password do not mach'});
-                
-            // }
-            // if(errors.length>0){
-            //     res.render('andmin/users/register' )
-            
-
-            // }
+       
             
             
             
