@@ -223,6 +223,39 @@ module.exports = {
     },
 
 
+    getaboutuspage:(req,res)=>{
+       res.render('admin/about/aboutus');
+    },
+    updateaboutus:(req,res) =>{
+        res.send("this is about us page")
+    },
+    getclintpage:(req,res) =>{
+        res.render('admin/about/ourclints');
+
+    },
+    updateclient:(req,res) =>{
+        res.send("this is clint page");
+
+    },
+    getteem:(req,res) =>{
+        res.render('admin/about/ourteem');
+
+    },
+    updateteemmembers:(req,res) =>{
+        res.send("this is update teem member");
+
+    },
+    getproductpage:(req,res) =>{
+        res.render('admin/about/ourproduct');
+
+    },
+    updateproduct:(req,res) =>{
+        res.render("this is product update page");
+
+    },      
+
+
+
     loginpost:(req,res)=>{
         res.redirect('/admin')
     }

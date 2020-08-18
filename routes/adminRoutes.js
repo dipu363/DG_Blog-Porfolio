@@ -29,11 +29,23 @@ router.route('/posts/delete/:id')
 .post(admincontroller.deletepost)
 
 
-router.route('/cominfo/about')
+router.route('/about')
 .get(admincontroller.getcominfoabout)
-.post(admincontroller.postcominfoabout)
 
-router.route('/cominfo/contact')
+router.route('/cominfo/about/aboutus')
+.get(admincontroller.getaboutuspage)
+.post(admincontroller.updateaboutus)
+router.route('/cominfo/about/clint')
+.get(admincontroller.getclintpage)
+.post(admincontroller.updateclient)
+router.route('/cominfo/about/teem')
+.get(admincontroller.getteem)
+.post(admincontroller.updateteemmembers)
+router.route('/cominfo/about/product')
+.get(admincontroller.getproductpage)
+.post(admincontroller.updateproduct)
+
+router.route('/cominfo/massege')
 .get(admincontroller.getmassege)
 .post(admincontroller.postcominfocontact)
 
