@@ -28,6 +28,10 @@ router.route('/register')
 router.route('/about')
 .get(defaultController.getaboutpage)
 
+router.route('/about/staff/:id')
+.get(defaultController.getaboutsinglestaff)
+
+
 
 router.route('/contact')
 .get(defaultController.getcontactpage)

@@ -1,44 +1,235 @@
-<div class="container">
-     <h1 class="text-center red " style=" color: purple; font-family:    Lucida Sans Regular;  "><u>Set Your Massege</u></h1>
-    
-    <div class="row p-4">
-        <div class="col-md-2"></div>
-
-        <div class="col-md-8">
-            <form action="/admin/cominfo/about/aboutus" method="post" enctype="multipart/form-data">
-                 <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" class="form-control" name="name" id="nameid" placeholder="Enter Your Name" value="">
-                </div>
-                <div class="form-group">
-                    <label for="designation">Your Designation</label>
-                    <input type="text" class="form-control" name="designation" id="designationid" placeholder="Enter Your Designation" value="">
-                </div>
-                
-                <div class="form-group">
-                    <label for="description">Your Massege</label>
-                    <textarea name="description" id="descriptionid" class="form-control" placeholder="Write Your Massege here" rows="10" value=""></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label for="file">Upload Your Photo</label>
-                    <input type="file" class="form-control" id="fileid" name="uploadedFile"  accept="image/jpeg, image/jpg, image/png, image/bmp" vlaue="{{uploadedFile}}">
-                </div>
-
-                <br>
-                <br>
-                
-                
-                <button class="btn btn-outline-success btn-lg" type="submit" align="center" >SUBMIT</button>
-
-                <br><br><br>
-                
-                
-            </form>
-        </div>
+<div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" style="background-color: darkcyan; border: 10px; border-radius: 50px; border-color: #000;" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <h3 style="color: rgb(255, 196, 0);">+  MESSEGES</h3>
+        </button>
+      </h5>
     </div>
-    
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+        <div class="container">
+          <div class="row p-4">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+              <div class="card my-4">
+                <h1 class="card-header text-center"  style=" color: purple; font-family:    Lucida Sans Regular;  ">Set A Messege About Company From Hare </h1>
+                  <div class="card-body">
+                    <form action="/admin/cominfo/about/aboutus" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="name"><h5>Name</h5></label>
+                            <input type="text" class="form-control" name="name" id="nameid" placeholder="Enter Your Name" value="{{name}}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="designation"><h5>Designation</h5></label>
+                            <input type="text" class="form-control" name="designation" id="designationid" placeholder="Enter Your Designation" value="{{designation}}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="description"><h5>Messege</h5></label>
+                            <textarea name="massege" id="massegeid" class="form-control" placeholder="Write Your Messege here" rows="10" value="{{massege}}" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="file"><h5>Upload Your Photo</h5></label>
+                            <input type="file" class="form-control" id="fileid" name="uploadedFile"  accept="image/jpeg, image/jpg, image/png, image/bmp" vlaue="{{uploadedFile}}"required>
+                        </div>
+                        <br><br>
+                        <button class="btn btn-outline-success btn-lg" type="submit" align="center" >SUBMIT</button>
+                        <br><br><br>
+                    </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="card">
+    <div class="card-header" style="background-color: darkcyan; border: 10px; border-radius: 50px; border-color: #000;" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+          <h3 style="color: rgb(255, 196, 0);">+  TEEM MEMBERS</h3>
+        </button>
+      </h5>
+    </div>
+    <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordionExample">
+      <div class="card-body">
+        <div class="container">
+          <div class="row p-4">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+              <div class="card my-4">
+                <h1 class="card-header text-center"  style=" color: purple; font-family:    Lucida Sans Regular;  ">Add A New Teem Member From Hare </h1>
+                  <div class="card-body">
+                    <form action="/admin/cominfo/about/teem" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="name"><h5>Name</h5></label>
+                            <input type="text" class="form-control" name="name" id="nameid" placeholder="Enter Your Name" value="{{name}}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="designation"><h5>Designation</h5></label>
+                            <input type="text" class="form-control" name="designation" id="designationid" placeholder="Enter Your Designation" value="{{designation}}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="description"><h5>Short Description</h5></label>
+                            <textarea name="description" id="descrrptionid" class="form-control" placeholder="Write Your Messege here" rows="10" value="{{description}}" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="file"><h5>Upload Photo</h5></label>
+                            <input type="file" class="form-control" id="fileid" name="uploadedFile"  accept="image/jpeg, image/jpg, image/png, image/bmp" vlaue="{{uploadedFile}}"required>
+                        </div>
+                        <br><br>
+                        <button class="btn btn-outline-success btn-lg" type="submit" align="center" >SUBMIT</button>
+                        <br><br><br>
+                    </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="card">
+    <div class="card-header" style="background-color: darkcyan; border: 10px; border-radius: 50px; border-color: #000;" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+          <h3 style="color: rgb(255, 196, 0);">+  CLIENTS</h3>
+        </button>
+      </h5>
+    </div>
+    <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordionExample">
+      <div class="card-body">
+        <div class="container">
+          <div class="row p-4">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+              <div class="card my-4">
+                <h1 class="card-header text-center"  style=" color: purple; font-family:    Lucida Sans Regular;  ">Add A New Client From Hare </h1>
+                  <div class="card-body">
+                    <form action="/admin/cominfo/about/client" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="name"><h5>Name</h5></label>
+                            <input type="text" class="form-control" name="name" id="nameid" placeholder="Enter Your Name" value="{{name}}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="designation"><h5> Web URL Link</h5></label>
+                            <input type="text" class="form-control" name="url" id="urlid" placeholder="Enter Your Designation" value="{{url}}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="file"><h5>Upload Client Business Logo Photo</h5></label>
+                            <input type="file" class="form-control" id="fileid" name="uploadedFile"  accept="image/jpeg, image/jpg, image/png, image/bmp" vlaue="{{uploadedFile}}"required>
+                        </div>
+                        <br><br>
+                        <button class="btn btn-outline-success btn-lg" type="submit" align="center" >SUBMIT</button>
+                        <br><br><br>
+                    </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="card">
+    <div class="card-header" style="background-color: darkcyan; border: 10px; border-radius: 50px; border-color: #000;" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+          <h3 style="color: rgb(255, 196, 0);">+  PRODUCTS</h3>
+        </button>
+      </h5>
+    </div>
+    <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordionExample">
+      <div class="card-body">
+        <div class="container">
+          <div class="row p-4">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+              <div class="card my-4">
+                <h1 class="card-header text-center"  style=" color: purple; font-family:    Lucida Sans Regular;  ">Add A New Product From Hare </h1>
+                  <div class="card-body">
+                    <form action="/admin/cominfo/about/product" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="name"><h5>Product Title</h5></label>
+                            <input type="text" class="form-control" name="proTitle" id="proTitleid" placeholder="Enter Product Title" value="{{proTitle}}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="designation"><h5>Description</h5></label>
+                            <input type="text" class="form-control" name="description" id="descriptionid" placeholder="Enter short description" value="{{description}}" required>
+                        </div>
+              
+                        <div class="form-group">
+                            <label for="file"><h5>Photo One</h5></label>
+                            <input type="file" class="form-control" id="fileid1" name="uploadedFile1"  accept="image/jpeg, image/jpg, image/png, image/bmp" vlaue="{{uploadedFile1}}"required>
+                        </div>
+                          <div class="form-group">
+                            <label for="file"><h5>Photo Two</h5></label>
+                            <input type="file" class="form-control" id="fileid2" name="uploadedFile2"  accept="image/jpeg, image/jpg, image/png, image/bmp" vlaue="{{uploadedFile2}}">
+                        </div>
+                          <div class="form-group">
+                            <label for="file"><h5>Photo Three</h5></label>
+                            <input type="file" class="form-control" id="fileid3" name="uploadedFile3"  accept="image/jpeg, image/jpg, image/png, image/bmp" vlaue="{{uploadedFile3}}">
+                        </div>
+                        <br><br>
+                        <button class="btn btn-outline-success btn-lg" type="submit" align="center" >SUBMIT</button>
+                        <br><br><br>
+                    </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="card">
+    <div class="card-header" style="background-color: darkcyan; border: 10px; border-radius: 50px; border-color: #000;" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+          <h3 style="color: rgb(255, 196, 0);">+  CONTACT INFORMATION</h3>
+        </button>
+      </h5>
+    </div>
+    <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordionExample">
+      <div class="card-body">
+        <div class="container">
+          <div class="row p-4">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+              <div class="card my-4">
+                <h1 class="card-header text-center"  style=" color: purple; font-family:    Lucida Sans Regular;  ">Add Company Contact Information From Hare </h1>
+                  <div class="card-body">
+                    <form action="/admin/cominfo/about/aboutus" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="name"><h5>Name</h5></label>
+                            <input type="text" class="form-control" name="name" id="nameid" placeholder="Enter Your Name" value="{{name}}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="designation"><h5>Designation</h5></label>
+                            <input type="text" class="form-control" name="designation" id="designationid" placeholder="Enter Your Designation" value="{{designation}}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="description"><h5>Messege</h5></label>
+                            <textarea name="massege" id="massegeid" class="form-control" placeholder="Write Your Messege here" rows="10" value="{{massege}}" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="file"><h5>Upload Your Photo</h5></label>
+                            <input type="file" class="form-control" id="fileid" name="uploadedFile"  accept="image/jpeg, image/jpg, image/png, image/bmp" vlaue="{{uploadedFile}}"required>
+                        </div>
+                        <br><br>
+                        <button class="btn btn-outline-success btn-lg" type="submit" align="center" >SUBMIT</button>
+                        <br><br><br>
+                    </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
     
-    
-</div>

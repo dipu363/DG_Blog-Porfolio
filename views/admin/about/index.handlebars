@@ -1,0 +1,242 @@
+<div class="accordion" id="accordionExample">
+  <div class="card" >
+    <div class="card-header" style="background-color: darkcyan; border: 10px; border-radius: 50px;" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+         <h3 style="color: rgb(255, 196, 0);">+ Staffs Messeges</h3>
+        </button>
+      </h5>
+    </div>
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Designation</th>
+                  <th>Messege</th>
+                  <th>Photo</th>
+                  <th>Create Date</th>
+                  <th>Update Date</th>
+                  <th>Action</th>                
+                </tr>
+              </thead>
+              <tbody>
+                {{#each StufMassege}}  
+                <tr>
+                  <td>{{id}}</td>
+                  <td>{{name}}</td>
+                  <td>{{designation}}</td>
+                  <td>{{massege}}</td>
+                  <td>{{file}}</td>
+                  <td>{{createdAt}}</td>
+                  <td>{{updatedAt}}</td>
+                  <td>
+                    <form action="/admin/cominfo/about/smdelete/{{id}}" method= "post">
+                        <button class="btn btn-sm btn-danger" type="submit">Delete</button>
+                    </form>
+                  </td>
+                </tr>
+               {{/each}}
+              </tbody>
+            </table>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+ <div class="card-header" style="background-color: darkcyan; border: 10px; border-radius: 50px; border-color: #fff;" id="headingtwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <h3 style="color: rgb(255, 196, 0);">+ Users Messeges</h3>
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Massege</th>
+                  <th>Recived Date</th>
+                  <th>Action</th>
+                
+                </tr>
+              </thead>
+              <tbody>
+                {{#each UsersMessege}}  
+                <tr>
+                  <td>{{id}}</td>
+                  <td>{{name}}</td>
+                  <td>{{email}}</td>
+                  <td>{{massegebody}}</td>
+                  <td>{{createdAt}}</td>
+                  <td>
+                    <form action="/admin/cominfo/about/umdelete/{{id}}" method= "post">
+                        <button class="btn btn-sm btn-danger" type="submit">Delete</button>
+                    </form>
+                  </td>
+                </tr>
+               {{/each}}
+              </tbody>
+            </table>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" style="background-color: darkcyan; border: 10px; border-radius: 50px; border-color: #fff;" id="headingthree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          <h3 style="color: rgb(255, 196, 0);">+ Our Valueable Clients</h3>
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+              <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>URL</th>
+                  <th>Image</th>
+                  <th>Create Date</th>
+                  <th>Action</th>
+                
+                </tr>
+              </thead>
+            
+              <tbody>
+                {{#each Client}}  
+                <tr>
+                  <td>{{id}}</td>
+                  <td>{{name}}</td>
+                  <td>{{url}}</td>
+                  <td>{{file}}</td>
+                  <td>{{updatedAt}}</td>
+                  <td>
+                    <form action="/admin/cominfo/about/cldelete/{{id}}" method= "post">
+                        <button class="btn btn-sm btn-danger" type="submit">Delete</button>
+                    </form>
+                  </td>
+                </tr>
+               {{/each}}
+              </tbody>
+            </table>
+          </div>
+      </div>
+    </div>
+  </div>
+   <div class="card">
+    <div class="card-header" style="background-color: darkcyan; border: 10px; border-radius: 50px; border-color: #fff;" id="headingfour">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+          <h3 style="color: rgb(255, 196, 0);">+ Our Teem Members</h3>
+        </button>
+      </h5>
+    </div>
+    <div id="collapsefour" class="collapse" aria-labelledby="headingfour" data-parent="#accordionExample">
+      <div class="card-body">
+              <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Designation</th>
+                  <th>About Member </th>
+                  <th>Image </th>
+                  <th>Create Date</th>
+                  <th>Update Date</th>
+                  <th>Action</th>
+                
+                </tr>
+              </thead>
+            
+              <tbody>
+                {{#each TeemMembers}}  
+                <tr>
+                  <td>{{id}}</td>
+                  <td>{{name}}</td>
+                  <td>{{designation}}</td>
+                  <td>{{description}}</td>
+                  <td>{{file}}</td>
+                  <td>{{createdAt}}</td>
+                  <td>{{updatedAt}}</td>
+                  <td>
+                    <form action="/admin/cominfo/about/tmdelete/{{id}}" method= "post">
+                        <button class="btn btn-sm btn-danger" type="submit">Delete</button>
+                    </form>
+                  </td>
+                </tr>
+               {{/each}}
+              </tbody>
+            </table>
+          </div>
+      </div>
+    </div>
+  </div>
+   <div class="card">
+     <div class="card-header" style="background-color: darkcyan; border: 10px; border-radius: 50px; border-color: #fff;" id="headingfive">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+          <h3 style="color: rgb(255, 196, 0);">+ Our Products</h3>
+        </button>
+      </h5>
+    </div>
+    <div id="collapsefive" class="collapse" aria-labelledby="headingfive" data-parent="#accordionExample">
+      <div class="card-body">
+              <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+
+                  <th>ID</th>
+                  <th>Product Name</th>
+                  <th>Description</th>
+                  <th>Image 1</th>
+                  <th>Image 2</th>
+                  <th>Image 3</th>
+                  <th>Create Date</th>
+                  <th>Update Date</th>
+                  <th>Action</th>
+                
+                </tr>
+              </thead>
+            
+              <tbody>
+                {{#each Products}}  
+                <tr>
+                  <td>{{id}}</td>
+                  <td>{{proTitle}}</td>
+                  <td>{{description}}</td>
+                  <td>{{file1}}</td>
+                  <td>{{file2}}</td>
+                  <td>{{file3}}</td>
+                  <td>{{createdAt}}</td>
+                  <td>{{updatedAt}}</td>
+                  <td>
+                    <form action="/admin/cominfo/about/prodelete/{{id}}" method= "post">
+                        <button class="btn btn-sm btn-danger" type="submit">Delete</button>
+                    </form>
+                  </td>
+                </tr>
+               {{/each}}
+              </tbody>
+            </table>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

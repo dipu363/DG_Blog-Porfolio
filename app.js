@@ -17,7 +17,7 @@ const passport = require('passport');
 const fileupload = require('express-fileupload');
 
 const app = express();
-app.use(flash());
+
 
 
 // // DB  Connection

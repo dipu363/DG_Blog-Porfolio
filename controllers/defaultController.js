@@ -25,9 +25,61 @@ module.exports = {
 
     },
 
-    getaboutpage:(req,res)=>{
+    getaboutpage:async(req,res)=>{
 
-        res.render('default/about')
+        // note:
+            // async method use for fatching data from multiple table
+            // render this data to one url by hiting useing awit method;
+
+        const StufMassege = await db.StufMassege.findAll();
+        const Client = await db.Client.findAll();
+        const TeemMembers = await db.TeemMembers.findAll();
+        const Products = await db.Products.findAll();
+
+
+
+
+       // res.send({stufmessege:stufmessege,client:client})
+       res.render('default/about',{
+           StufMassege:StufMassege,
+           Client:Client,
+           TeemMembers:TeemMembers,
+           Products:Products
+        })
+
+       
+    },
+
+
+    getaboutsinglestaff: async(req,res)=>{
+
+        const StufMassege = await db.StufMassege.findAll();
+        const Client = await db.Client.findAll();
+        const TeemMembers = await db.TeemMembers.findAll();
+        const Products = await db.Products.findAll();
+       const StufMassege1 = await db.StufMassege.findAll({
+           where:{
+               id:req.params.id
+           }
+       });
+
+          res.render('default/about',
+          {
+            StufMassege:StufMassege,
+            Client:Client,
+            TeemMembers:TeemMembers,
+            Products:Products,
+            StufMassege1:StufMassege1,
+
+           
+          } )
+          console.log('result',{StufMassege1})
+
+
+
+
+
+         // db.Posts.findAll().then(Posts => res.render('admin/posts/index',{Posts}));
     },
     getcontactpage:(req,res)=>{
         res.render('default/contact')
