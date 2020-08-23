@@ -164,14 +164,14 @@
                             <label for="file"><h5>Photo One</h5></label>
                             <input type="file" class="form-control" id="fileid1" name="uploadedFile1"  accept="image/jpeg, image/jpg, image/png, image/bmp" vlaue="{{uploadedFile1}}"required>
                         </div>
-                          <div class="form-group">
+                          {{!-- <div class="form-group">
                             <label for="file"><h5>Photo Two</h5></label>
                             <input type="file" class="form-control" id="fileid2" name="uploadedFile2"  accept="image/jpeg, image/jpg, image/png, image/bmp" vlaue="{{uploadedFile2}}">
                         </div>
                           <div class="form-group">
                             <label for="file"><h5>Photo Three</h5></label>
                             <input type="file" class="form-control" id="fileid3" name="uploadedFile3"  accept="image/jpeg, image/jpg, image/png, image/bmp" vlaue="{{uploadedFile3}}">
-                        </div>
+                        </div> --}}
                         <br><br>
                         <button class="btn btn-outline-success btn-lg" type="submit" align="center" >SUBMIT</button>
                         <br><br><br>
@@ -196,32 +196,141 @@
       <div class="card-body">
         <div class="container">
           <div class="row p-4">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
+            
+            <div class="col-md-12">
               <div class="card my-4">
                 <h1 class="card-header text-center"  style=" color: purple; font-family:    Lucida Sans Regular;  ">Add Company Contact Information From Hare </h1>
                   <div class="card-body">
-                    <form action="/admin/cominfo/about/aboutus" method="post" enctype="multipart/form-data">
-                        <div class="form-group">
-                            <label for="name"><h5>Name</h5></label>
-                            <input type="text" class="form-control" name="name" id="nameid" placeholder="Enter Your Name" value="{{name}}" required>
+                      <form action="/admin/cominfo/about/contactinfo" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-md-4">
+                                <label for="exampleInputName">Name Of Company *</label>
+                                <input name="companyName" class="form-control" id="companyNameid" type="text" aria-describedby="nameHelp" placeholder="Enter Company Name" required
+                                       value="{{companyName}}">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="exampleInputLastName">Name Of Country *</label>
+                                <input name="countryName" class="form-control" id="countryNameid" type="text" aria-describedby="nameHelp" placeholder="Enter Country Name " required
+                                       value="{{countryName}}">
+                            </div>
+                             <div class="col-md-4">
+                                <label for="exampleInputLastName">Name Of State/Division *</label>
+                                <input name="state" class="form-control" id="stateid" type="text" aria-describedby="nameHelp" placeholder="Enter State/division of Country " required
+                                       value="{{state}}">
+                            </div>
+                        </div>
                         </div>
                         <div class="form-group">
-                            <label for="designation"><h5>Designation</h5></label>
-                            <input type="text" class="form-control" name="designation" id="designationid" placeholder="Enter Your Designation" value="{{designation}}" required>
+
+                         <div class="form-row">
+                            <div class="col-md-4">
+                                <label for="exampleInputName">Area Of State *</label>
+                                <input name="area" class="form-control" id="areaid" type="text" aria-describedby="nameHelp" placeholder="Enter Area " required
+                                       value="{{area}}">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="exampleInputLastName">Road No *</label>
+                                <input name="roadNo" class="form-control" id="roadNoid" type="text" aria-describedby="nameHelp" placeholder="Enter Road No " required
+                                       value="{{roadNo}}">
+                            </div>
+                             <div class="col-md-4">
+                                <label for="exampleInputLastName">Holding/House No *</label>
+                                <input name="houseNO" class="form-control" id="exampleInputLastName" type="text" aria-describedby="nameHelp" placeholder="Enter House No " required
+                                       value="{{houseNO}}">
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="description"><h5>Messege</h5></label>
-                            <textarea name="massege" id="massegeid" class="form-control" placeholder="Write Your Messege here" rows="10" value="{{massege}}" required></textarea>
+                    </div>
+                      <div class="form-group">
+                          <div class="form-row">
+                            <div class="col-md-4">
+                                <label for="exampleInputName">Company Email Address *</label>
+                                <input name="email" class="form-control" id="emailid" type="text" aria-describedby="nameHelp" placeholder="Enter Company Email Address " required
+                                       value="{{email}}">
+                            </div>
+                          
+                             <div class="col-md-4">
+                                <label for="exampleInputLastName">Web Site URL / Address</label>
+                                <input name="weburl" class="form-control" id="weburlid" type="text" aria-describedby="nameHelp" placeholder="Enter Web URL "
+                                       value="{{weburl}}">
+                            </div>
+                             
+                            <div class="col-md-4">
+                                <label for="exampleInputName">FaceBook URL</label>
+                                <input name="facebook" class="form-control" id="facebookid" type="text" aria-describedby="nameHelp" placeholder="Enter FaceBook Link " 
+                                       value="{{facebook}}">
+                            </div>
+                          </div>
+                        
+                    </div>
+                      <div class="form-group">
+                          <div  class="form-row">
+                         
+                            <div class="col-md-4">
+                                <label for="exampleInputLastName">Twiter URL</label>
+                                <input name="twiter" class="form-control" id="twiterid" type="text" aria-describedby="nameHelp" placeholder="Enter Twiter Link "
+                                       value="{{twiter}}">
+                            </div>
+                             <div class="col-md-4">
+                                <label for="exampleInputLastName">Instagram URL</label>
+                                <input name="instagram" class="form-control" id="instagramid" type="text" aria-describedby="nameHelp" placeholder="Enter Instagram Link "
+                                       value="{{instagram}}">
+                            </div>
+                              <div class="col-md-4">
+                                <label for="exampleInputLastName">LinkedIn URL</label>
+                                <input name="linkedIn" class="form-control" id="linkedInid" type="text" aria-describedby="nameHelp" placeholder="Enter LinkedIn Link "
+                                       value="{{linkedIn}}">
+                            </div>
                         </div>
+                      </div>
+
                         <div class="form-group">
-                            <label for="file"><h5>Upload Your Photo</h5></label>
+                          <div  class="form-row">
+                         
+                            <div class="col-md-4">
+                                <label for="exampleInputLastName">Phone No *</label>
+                                <input name="phoneno" class="form-control" id="phonenoid" type="text" aria-describedby="nameHelp" placeholder="Enter Phone No " required
+                                       value="{{phoneno}}">
+                            </div>
+                             <div class="col-md-4">
+                                <label for="exampleInputLastName">M0bile No 1 *</label>
+                                <input name="mobile1" class="form-control" id="mobile1id" type="text" aria-describedby="nameHelp" placeholder="Enter Mobile No 1 " required
+                                       value="{{mobile1}}">
+                            </div>
+                              <div class="col-md-4">
+                                <label for="exampleInputLastName">Mobile No 2</label>
+                                <input name="mobile2" class="form-control" id="mobile2id" type="text" aria-describedby="nameHelp" placeholder="Enter Mobile No 2 "
+                                       value="{{mobile2}}">
+                            </div>
+                        </div>
+                      </div>
+                        <div class="form-group">
+                          <div  class="form-row">
+                         
+                            <div class="col-md-6">
+                              
+                            <label for="file">Upload Company Logo *</label>
                             <input type="file" class="form-control" id="fileid" name="uploadedFile"  accept="image/jpeg, image/jpg, image/png, image/bmp" vlaue="{{uploadedFile}}"required>
+                        
+                            </div>
+                             <div class="col-md-6">
+                                <label for="exampleInputLastName">Fax No</label>
+                                <input name="faxno" class="form-control" id="faxnoid" type="text" aria-describedby="nameHelp" placeholder="Enter Fax No "
+                                       value="{{faxno}}">
+                            </div>
+                              
                         </div>
-                        <br><br>
-                        <button class="btn btn-outline-success btn-lg" type="submit" align="center" >SUBMIT</button>
-                        <br><br><br>
-                    </form>
+                      </div>
+                    
+                    
+                    
+                    <div class="form-group">
+                            <label for="description">Short Description *</label>
+                            <textarea name="description" id="descrrptionid" class="form-control" placeholder="Write A Short Description About Company " rows="5" value="{{description}}" required></textarea>
+                        </div>
+                   
+                    <button type="submit" class="btn btn-outline-success ">SUBMIT INFORMATION</button>
+                </form>
                 </div>
               </div>
             </div>

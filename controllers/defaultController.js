@@ -3,8 +3,14 @@
 const db = require('../models')
 
 module.exports = {
-   index: (req,res)=>{
-    db.Posts.findAll().then(Posts => res.render('default/index',{Posts}));
+   index: async(req,res)=>{
+     const Posts = await db.Posts.findAll();
+     const ContactInfo = await db.ContactInfo.findAll();
+
+     res.render('default/index',{
+        Posts:Posts,
+        ContactInfo:ContactInfo,
+     })
        
     },
 
@@ -35,6 +41,7 @@ module.exports = {
         const Client = await db.Client.findAll();
         const TeemMembers = await db.TeemMembers.findAll();
         const Products = await db.Products.findAll();
+        const ContactInfo = await db.ContactInfo.findAll();
 
 
 
@@ -44,12 +51,12 @@ module.exports = {
            StufMassege:StufMassege,
            Client:Client,
            TeemMembers:TeemMembers,
-           Products:Products
+           Products:Products,
+           ContactInfo:ContactInfo,
         })
 
        
     },
-
 
     getaboutsinglestaff: async(req,res)=>{
 
@@ -57,6 +64,7 @@ module.exports = {
         const Client = await db.Client.findAll();
         const TeemMembers = await db.TeemMembers.findAll();
         const Products = await db.Products.findAll();
+        const ContactInfo = await db.ContactInfo.findAll();
        const StufMassege1 = await db.StufMassege.findAll({
            where:{
                id:req.params.id
@@ -70,20 +78,24 @@ module.exports = {
             TeemMembers:TeemMembers,
             Products:Products,
             StufMassege1:StufMassege1,
+            ContactInfo:ContactInfo,
 
            
           } )
           console.log('result',{StufMassege1})
 
-
-
-
-
-         // db.Posts.findAll().then(Posts => res.render('admin/posts/index',{Posts}));
     },
-    getcontactpage:(req,res)=>{
-        res.render('default/contact')
+
+    getcontactpage:async(req,res)=>{
+        
+        const ContactInfo = await db.ContactInfo.findAll();
+   
+        res.render('default/contact',{
+           
+           ContactInfo:ContactInfo,
+        })
     },
+    
     massegepost:(req,res)=>{
 
         db.Masseges.create({

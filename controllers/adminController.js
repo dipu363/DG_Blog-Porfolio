@@ -121,9 +121,7 @@ module.exports = {
             const UsersMessege = await db.Masseges.findAll();
             const TeemMembers = await db.TeemMembers.findAll();
             const Products = await db.Products.findAll();
-
-
-           // res.send({stufmessege:stufmessege,client:client})
+            
            res.render('admin/about/index',{
                StufMassege:StufMassege,
                Client:Client,
@@ -282,31 +280,31 @@ module.exports = {
         //about page our product all needed method start in here
         updateproduct:(req,res) =>{
             let filename1 = '';
-            let filename2 = '';
-            let filename3 = '';
+            // let filename2 = '';
+            // let filename3 = '';
      
             if (!isEmpty(req.files)) {
                 let file1 = req.files.uploadedFile1;
-                let file2 = req.files.uploadedFile2;
-                let file3 = req.files.uploadedFile3;
+                // let file2 = req.files.uploadedFile2;
+                // let file3 = req.files.uploadedFile3;
 
                 filename1 = file1.name;
-                filename2 = file2.name;
-                filename3 = file3.name;
+                // filename2 = file2.name;
+                // filename3 = file3.name;
                 let uploadDir = './public/uploads/';
     
                 file1.mv(uploadDir + filename1, (err) => {
                     if (err)
                         throw err;
                 });
-                file2.mv(uploadDir + filename2, (err) => {
-                    if (err)
-                        throw err;
-                });
-                file3.mv(uploadDir + filename3, (err) => {
-                    if (err)
-                        throw err;
-                });
+                // file2.mv(uploadDir + filename2, (err) => {
+                //     if (err)
+                //         throw err;
+                // });
+                // file3.mv(uploadDir + filename3, (err) => {
+                //     if (err)
+                //         throw err;
+                // });
             }
     
             try {
@@ -314,8 +312,8 @@ module.exports = {
                     proTitle:req.body.proTitle,
                     description:req.body.description,
                     file1: `/uploads/${filename1}`,
-                    file2: `/uploads/${filename2}`,
-                    file3: `/uploads/${filename3}`,
+                    // file2: `/uploads/${filename2}`,
+                    // file3: `/uploads/${filename3}`,
     
                   }).then(Products =>
                     req.flash('success-message','successful client Created '),
@@ -344,7 +342,72 @@ module.exports = {
 
         },
 
-                
+        // company contact information add method start in here
+        updatecontactinfo:async(req,res)=>{
+
+        const rowcount = await db.ContactInfo.findAll();
+
+        if(rowcount.length == 1){
+         console.log('Company Information Is allredy  Inserted');
+         req.flash('success-message','Company Contact Infomation AllRedy Submited please Update Now ');
+         res.redirect('/admin/about');
+         res.render('>/default/footer',{rowcount})
+
+        }else{
+
+
+      
+
+
+
+            let filename = '';
+     
+            if (!isEmpty(req.files)) {
+                let file = req.files.uploadedFile;
+                filename = file.name;
+                let uploadDir = './public/uploads/';
+    
+                file.mv(uploadDir + filename, (err) => {
+                    if (err)
+                        throw err;
+                });
+            }
+    
+            try {
+                db.ContactInfo.create({
+                    companyName:req.body.companyName,
+                    countryName:req.body.countryName,
+                    state:req.body.state,
+                    area:req.body.area,
+                    roadNo:req.body.roadNo,
+                    houseNO:req.body.houseNO,
+                    email:req.body.email,
+                    phoneno:req.body.phoneno,
+                    mobile1:req.body.mobile1,
+                    mobile2:req.body.mobile2,
+                    weburl:req.body.weburl,
+                    facebook:req.body.facebook,
+                    twiter:req.body.twiter,
+                    instagram:req.body.instagram,
+                    linkedIn:req.body.linkedIn,
+                    faxno:req.body.faxno,
+                    description:req.body.description,
+                    file: `/uploads/${filename}`,
+    
+                  }).then(ContactInfo =>
+                    req.flash('success-message','Company Contact Infomation submit successful '),
+                    res.redirect('/admin/about'));
+    
+                  
+    
+            } catch (error) {
+                console.log(error);
+            } 
+
+        }
+
+
+        },        
         
         //  user registration all needed method strat in heare
         getallusers:(req,res)=>{

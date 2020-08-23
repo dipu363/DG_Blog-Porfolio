@@ -55,6 +55,9 @@ router.route('/cominfo/about/product')
 router.route('/cominfo/about/prodelete/:id')
 .post(admincontroller.productdelete)
 
+router.route('/cominfo/about/contactinfo')
+.post(admincontroller.updatecontactinfo)
+
 
 router.route('/cominfo/massege')
 .get(admincontroller.getmassege)
